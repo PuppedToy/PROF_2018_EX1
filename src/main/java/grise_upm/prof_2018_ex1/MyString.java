@@ -4,16 +4,12 @@ public class MyString {
 
 	private String value;
 	
-	public void MyString(String value) {
+	public MyString(String value) {
 		this.value = value;
 	}
 	
 	public String getValue() {
 		return this.value;
-	}
-	
-	public void setValue(String value) {
-		this.value = value;
 	}
 	
 	public int compareTo(MyString other) {
@@ -23,15 +19,19 @@ public class MyString {
 			// nodo 2
 			return -1;
 		// nodo 3
-		if(this.value != null && other.getValue() == null)
+		if(this.value != null && 
+				// nodo 20
+				other.getValue() == null)
 			// nodo 4
 			return -1;
 		// nodo 5
-		if(this.value == null && other.getValue() != null)
+		if(this.value == null && 
+				// nodo 21
+				other.getValue() != null)
 			// nodo 6
 			return 1;
 		// nodo 7
-		if(this.value == null && other.getValue() == null) 
+		if(this.value == null)
 			// nodo 8
 			return 0;
 		
